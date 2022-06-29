@@ -5,6 +5,10 @@ import { readFileSync, writeFileSync, existsSync, readFile } from "fs";
 import { argv } from "process";
 const { parse, stringify } = JSON;
 
+if (!existsSync(".gitignore")) {
+  writeFileSync(".gitignore", "");
+}
+
 let isiGitignore = readFileSync(".gitignore").toString();
 let gitignore = isiGitignore.split("\n");
 
