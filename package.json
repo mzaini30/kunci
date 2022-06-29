@@ -1,0 +1,38 @@
+{
+  "name": "kunci",
+  "version": "1.0.0",
+  "description": "Tools yang digunakan untuk membuka dan mengunci file-file di foldermu",
+  "scripts": {
+    "pack": "tsx script/pack.ts",
+    "prepublishOnly": "npm run pack"
+  },
+  "files": [
+    "dist"
+  ],
+  "bin": {
+    "buka": "dist/buka.js",
+    "kunci": "dist/kunci.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mzaini30/kunci.git"
+  },
+  "keywords": [
+    "crypto",
+    "kunci",
+    "secret",
+    "rahasia"
+  ],
+  "author": "Zen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mzaini30/kunci/issues"
+  },
+  "homepage": "https://github.com/mzaini30/kunci#readme",
+  "devDependencies": {
+    "@types/node": "^18.0.0",
+    "crypto-zen": "^1.0.0",
+    "esbuild": "^0.14.47",
+    "tsx": "^3.6.0"
+  }
+}
