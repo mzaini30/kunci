@@ -43,7 +43,7 @@ if (argv.length > 2) {
   lihatYangMauDikunci = parse(lihatYangMauDikunci);
   for (let x of lihatYangMauDikunci) {
     if (existsSync(x)) {
-      let kuncinya = readFileSync("kunci.txt").toString("base64");
+      let kuncinya = readFileSync("kunci.txt").toString().trim();
       let isinya = readFileSync(x).toString("base64");
       let terkunci = encrypt(isinya, kuncinya);
       writeFileSync(`${x}.rahasia`, terkunci, "base64");

@@ -5,7 +5,7 @@ import { writeFileSync, readFileSync, existsSync } from "fs";
 
 const { parse } = JSON;
 
-let kunci = readFileSync("kunci.txt").toString("base64");
+let kunci = readFileSync("kunci.txt").toString().trim();
 let listFile: string | string[] = readFileSync("kunci.json").toString();
 listFile = parse(listFile);
 
