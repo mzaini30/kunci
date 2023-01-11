@@ -14,13 +14,12 @@ Jalankan `kunci namaFilenya`
 
 Jalankan `kunci`
 
-Supaya auto kunci, jalankan script berikut:
-
-```bash
-cp .git/hooks/pre-commit.sample .git/hooks/pre-commit
-echo 'kunci' > .git/hooks/pre-commit
-```
-
 ## Cara Membuka
 
 Jalankan `buka`
+
+## Support Me
+
+Gopay : 0815 4514 3654
+
+Paypal : muhzaini30@gmail.com
