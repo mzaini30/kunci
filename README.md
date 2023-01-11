@@ -14,6 +14,8 @@ Jalankan `kunci namaFilenya`
 
 Jalankan `kunci`
 
+Tapi, kalau kamu menggunakan Git, nggak perlu menjalankan `kunci` karena dia akan jalan otomatis saat commit.
+
 ## Cara Membuka
 
 Jalankan `buka`
