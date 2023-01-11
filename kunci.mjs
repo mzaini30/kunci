@@ -17,9 +17,13 @@ if (!existsSync(".gitignore")) {
   writeFileSync(".gitignore", "");
 }
 
-if (!existsSync(".git/hooks/pre-commit")) {
-  writeFileSync(".git/hooks/pre-commit", "kunci");
+async function hooks() {
+  if (!existsSync(".git/hooks/pre-commit")) {
+    await $`cp .git/hooks/pre-commit.sample .git/hooks/pre-commit`;
+    writeFileSync(".git/hooks/pre-commit", "kunci");
+  }
 }
+hooks();
 
 let isiGitignore = readFileSync(".gitignore").toString();
 let gitignore = isiGitignore.split("\n");
