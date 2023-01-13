@@ -1,6 +1,6 @@
 {
   "name": "kunci",
-  "version": "1.4.1",
+  "version": "1.4.2",
   "description": "Tools yang digunakan untuk membuka dan mengunci file-file di foldermu",
   "scripts": {
     "build:buka": "esbuild ./src/buka.mjs --bundle --outfile=./build/buka.js --platform=node --minify",
