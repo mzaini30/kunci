@@ -14,6 +14,8 @@ Jalankan `kunci namaFilenya`
 
 Jalankan `kunci`
 
+Kalau kamu menggunakan OS selain Windows, dia akan terkunci saat commit ke Git.
+
 ## Cara Membuka
 
 Jalankan `buka`

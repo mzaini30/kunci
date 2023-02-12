@@ -5,8 +5,6 @@ import {
   readFileSync,
   writeFileSync,
   existsSync,
-  readFile,
-  writeFile,
 } from "fs";
 import { argv } from "process";
 import { $ } from "zx";
@@ -17,21 +15,16 @@ if (!existsSync(".gitignore")) {
   writeFileSync(".gitignore", "");
 }
 
-function cekOs(teks){
-  if (process.platform === "win32") {
-    return teks.replace(/\//g, "\\");
-  } else {
-    return teks;
-  }
-}
 
 async function hooks() {
-  if (
-    !existsSync(cekOs(".git/hooks/pre-commit")) &&
-    existsSync(cekOs(".git/hooks/pre-commit.sample"))
-  ) {
-    await $(cekOs(`cp .git/hooks/pre-commit.sample .git/hooks/pre-commit`));
-    writeFileSync(cekOs(".git/hooks/pre-commit"), "kunci");
+  if (process.platform != "win32") {
+    if (
+      !existsSync(".git/hooks/pre-commit") &&
+      existsSync(".git/hooks/pre-commit.sample")
+    ) {
+      await $`cp .git/hooks/pre-commit.sample .git/hooks/pre-commit`;
+      writeFileSync(".git/hooks/pre-commit", "kunci");
+    }
   }
 }
 hooks();
