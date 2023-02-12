@@ -17,13 +17,21 @@ if (!existsSync(".gitignore")) {
   writeFileSync(".gitignore", "");
 }
 
+function cekOs(teks){
+  if (process.platform === "win32") {
+    return teks.replace(/\//g, "\\");
+  } else {
+    return teks;
+  }
+}
+
 async function hooks() {
   if (
-    !existsSync(".git/hooks/pre-commit") &&
-    existsSync(".git/hooks/pre-commit.sample")
+    !existsSync(cekOs(".git/hooks/pre-commit")) &&
+    existsSync(cekOs(".git/hooks/pre-commit.sample"))
   ) {
-    await $`cp .git/hooks/pre-commit.sample .git/hooks/pre-commit`;
-    writeFileSync(".git/hooks/pre-commit", "kunci");
+    await $(cekOs(`cp .git/hooks/pre-commit.sample .git/hooks/pre-commit`));
+    writeFileSync(cekOs(".git/hooks/pre-commit"), "kunci");
   }
 }
 hooks();
@@ -32,9 +40,10 @@ let isiGitignore = readFileSync(".gitignore").toString();
 let gitignore = isiGitignore.split("\n");
 
 function masukkanKeGitignore(file) {
-  if (!gitignore.includes(file)) {
+  // if (!gitignore.includes(file)) {
     gitignore.push(file);
-  }
+    gitignore = [...new Set(gitignore)]
+  // }
 }
 
 masukkanKeGitignore("kunci.txt");

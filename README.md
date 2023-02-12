@@ -14,14 +14,8 @@ Jalankan `kunci namaFilenya`
 
 Jalankan `kunci`
 
-Tapi, kalau kamu menggunakan Git, nggak perlu menjalankan `kunci` karena dia akan jalan otomatis saat commit.
-
 ## Cara Membuka
 
 Jalankan `buka`
 
-## Support Me
-
-Gopay : 0815 4514 3654
-
-Paypal : muhzaini30@gmail.com
+[Join Komunitas](https://chat.whatsapp.com/Gvk1eEFPpBRKVgxksVKAfs)
