@@ -1,6 +1,6 @@
 {
   "name": "kunci",
-  "version": "1.5.1",
+  "version": "1.5.2",
   "description": "Tools yang digunakan untuk membuka dan mengunci file-file di foldermu",
   "bin": {
     "buka": "./buka.mjs",

@@ -17,15 +17,14 @@ if (!existsSync(".gitignore")) {
 
 
 async function hooks() {
-  if (process.platform != "win32") {
     if (
       !existsSync(".git/hooks/pre-commit") &&
       existsSync(".git/hooks/pre-commit.sample")
     ) {
       await $`cp .git/hooks/pre-commit.sample .git/hooks/pre-commit`;
-      writeFileSync(".git/hooks/pre-commit", "kunci");
+      writeFileSync(".git/hooks/pre-commit", `#!/bin/bash
+pnpm kunci`);
     }
-  }
 }
 hooks();
 

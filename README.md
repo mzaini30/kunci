@@ -6,6 +6,12 @@ Tools yang digunakan untuk membuka dan mengunci file-file di foldermu
 
 Siapkan file `kunci.txt` yang berisi teks yang akan membuka dan mengunci file-file. Misalnya, file `kunci.txt` berisi `kucing`.
 
+## Install
+
+```bash
+pnpm i kunci
+```
+
 ## Tambahkan File yang Mau Dikunci
 
 Jalankan `kunci namaFilenya`
