@@ -1,10 +1,14 @@
 {
   "name": "kunci",
-  "version": "1.5.2",
+  "version": "1.5.3",
   "description": "Tools yang digunakan untuk membuka dan mengunci file-file di foldermu",
+  "scripts": {
+    "build": "esbuild ./src/buka.mjs ./src/kunci.mjs --bundle --minify --platform=node --outdir=dist",
+    "prepublishOnly": "pnpm build"
+  },
   "bin": {
-    "buka": "./buka.mjs",
-    "kunci": "./kunci.mjs"
+    "buka": "./dist/buka.js",
+    "kunci": "./dist/kunci.js"
   },
   "repository": {
     "type": "git",
@@ -22,8 +26,9 @@
     "url": "https://github.com/mzaini30/kunci/issues"
   },
   "homepage": "https://github.com/mzaini30/kunci#readme",
-  "dependencies": {
+  "devDependencies": {
     "crypto-zen": "^1.0.0",
+    "esbuild": "^0.17.10",
     "zx": "^7.1.1"
   }
 }
